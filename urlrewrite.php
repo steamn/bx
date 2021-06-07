@@ -64,7 +64,7 @@ $arUrlRewrite=array (
     'PATH' => '/personal/index.php',
     'SORT' => 100,
   ),
-  12 => 
+  14 => 
   array (
     'CONDITION' => '#^/catalog/#',
     'RULE' => '',
@@ -78,6 +78,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:catalog.store',
     'PATH' => '/store/index.php',
+    'SORT' => 100,
+  ),
+  13 => 
+  array (
+    'CONDITION' => '#^\\??(.*)#',
+    'RULE' => '&$1',
+    'ID' => 'bitrix:catalog.top',
+    'PATH' => '/include/top-sale.php',
     'SORT' => 100,
   ),
   5 => 

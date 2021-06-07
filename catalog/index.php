@@ -230,8 +230,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
 		"DETAIL_SHOW_SLIDER" => "N",
 		"DETAIL_DETAIL_PICTURE_MODE" => array(
-			0 => "POPUP",
-			1 => "MAGNIFIER",
+			0 => "MAGNIFIER",
 		),
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
@@ -279,12 +278,22 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"MESSAGE_404" => "",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
+		"DETAIL_SHOW_MAX_QUANTITY" => "N",
+		"DETAIL_SHOW_BASIS_PRICE" => "Y",
+		"LABEL_PROP_MOBILE" => array(
+		),
+		"LABEL_PROP_POSITION" => "top-left",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
-			"section" => "#SECTION_CODE#/",
-			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-			"compare" => "compare/",
-			"smart_filter" => "#SECTION_CODE#/filter/#SMART_FILTER_PATH#/apply/",
+			"section" => "#SECTION_CODE_PATH#/",
+			"element" => "#SECTION_CODE_PATH#/#ELEMENT_ID#/",
+			"compare" => "compare.php?action=#ACTION_CODE#",
+			"smart_filter" => "#SECTION_CODE_PATH#/filter/#SMART_FILTER_PATH#/apply/",
+		),
+		"VARIABLE_ALIASES" => array(
+			"compare" => array(
+				"ACTION_CODE" => "action",
+			),
 		)
 	),
 	false
